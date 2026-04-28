@@ -1,0 +1,6 @@
+export { ChallengeComment } from './challenge-comment.entity'
+export { ChallengeCommentService } from './challenge-comment.service'
+export { ChallengeCommentModule } from './challenge-comment.module'
+export { PostChallengeCommentReqDto } from './dto/req/post-challenge-comment.req.dto'
+export { PatchChallengeCommentReqDto } from './dto/req/patch-challenge-comment.req.dto'
+export { GetCommentsResDto, GetCommentsResDtoItem } from './dto/res/get-comments.res.dto'

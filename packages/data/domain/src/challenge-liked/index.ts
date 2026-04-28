@@ -1,0 +1,5 @@
+export { ChallengeLiked } from './challenge-liked.entity'
+export { ChallengeLikedService } from './challenge-liked.service'
+export { ChallengeLikedModule } from './challenge-liked.module'
+export { PostLikedResDto } from './dto/res/post-liked.res.dto'
+export { GetLikedResDto, GetLikedResDtoItem } from './dto/res/get-liked.res.dto'

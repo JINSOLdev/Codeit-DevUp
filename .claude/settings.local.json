@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/GitHub/**)",
+      "Read(//d/GitHub//**)",
+      "Bash(find /d/GitHub/4_Backend/packages/data/domain/src/project* /d/GitHub/4_Backend/packages/data/domain/src/event-emitter/project-event -type f)",
+      "Bash(find /d/GitHub/4_Backend/apps/user-api/src/controllers/project* -type f)",
+      "Bash(find /d/GitHub/4_Backend/packages/data/domain/src/project* -type f)",
+      "Bash(find /d/GitHub/4_Backend -path */system/typescript/*.json)",
+      "Bash(xargs cat:*)",
+      "Bash(grep -n \"from ''@system/logger''\" /d/GitHub/4_Backend/packages/data/domain/src/event-emitter/metrics-event/metrics-event.handler.ts)",
+      "Bash(git checkout:*)",
+      "Bash(xargs grep:*)",
+      "Bash(grep:*)",
+      "Bash(grep -r \"from ''''\\\\.\\\\.\" D:/GitHub/4_Backend/apps/batch/src/ --include=*.ts -l)",
+      "Bash(grep -r \"from ''''\\\\.\\\\.\" D:/GitHub/4_Backend/apps/user-api/src/ --include=*.ts -l)",
+      "Bash(npx nest:*)",
+      "Bash(pnpm build:*)",
+      "Bash(for dir:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $dir ===\")",
+      "Read(//d/GitHub/4_Backend/packages/data/domain/src/$dir/**)",
+      "Bash(done)",
+      "Bash(find D:/GitHub/4_Backend/packages/system/typescript -name *.json)",
+      "Bash(grep -rn \"from ''''\\\\.\\\\.\" D:/GitHub/4_Backend/packages/data/domain/src/ --include=*.ts)",
+      "Bash(find . -name nest.json -path */system/typescript/*)",
+      "Read(//mnt/d/GitHub/**)",
+      "Bash(docker-compose -f docker-compose.dev.yml --env-file .env.dev up --build)",
+      "Bash(sed -i \"s/@PrimaryColumn\\({ type: ''bigint'' }\\)/@PrimaryColumn\\({ type: ''int'' }\\)/g\" packages/data/domain/src/user/entities/user-password.entity.ts packages/data/domain/src/user/entities/user-setting.entity.ts)",
+      "Bash(sed -i \"s/@Column\\({ type: ''bigint'' }\\)/@Column\\({ type: ''int'' }\\)/g\" packages/data/domain/src/user/entities/user-account.entity.ts packages/data/domain/src/challenge/challenge.entity.ts)",
+      "Bash(ls:*)",
+      "Bash(find D:/GitHub/4_Backend/apps/batch/src -type f -name *.ts)",
+      "Bash(pnpm install:*)",
+      "Bash(find /d/GitHub/4_Backend -type f -name \"*.ts\" ! -path \"*/node_modules/*\" ! -path \"*/.claude/*\" -exec grep -l \"project.types\\\\|ProjectStatus\\\\|ProjectType\\\\|Position\\\\|ContactMethod\" {})"
+    ]
+  }
+}

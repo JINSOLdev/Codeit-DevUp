@@ -1,0 +1,22 @@
+{
+  "name": "@data/migrations",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --fix",
+    "format": "prettier ./src --write",
+    "typeorm": "node ./src/typeorm.mjs"
+  },
+  "dependencies": {
+    "@system/database": "workspace:*",
+    "typeorm": "catalog:nest"
+  },
+  "devDependencies": {
+    "@system/eslint": "workspace:*",
+    "@system/typescript": "workspace:*",
+    "@types/node": "catalog:common",
+    "ts-node": "catalog:common",
+    "tsconfig-paths": "catalog:common"
+  }
+}

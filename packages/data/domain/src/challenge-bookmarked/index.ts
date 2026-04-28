@@ -1,0 +1,5 @@
+export { ChallengeBookmarked } from './challenge-bookmarked.entity'
+export { ChallengeBookmarkedService } from './challenge-bookmarked.service'
+export { ChallengeBookmarkedModule } from './challenge-bookmarked.module'
+export { PostBookmarkedResDto } from './dto/res/post-bookmarked.res.dto'
+export { GetBookmarkedResDto, GetBookmarkedResDtoItem } from './dto/res/get-bookmarked.res.dto'

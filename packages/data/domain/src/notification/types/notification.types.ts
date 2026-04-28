@@ -1,0 +1,42 @@
+﻿import { IsEnum, IsInt } from 'class-validator'
+import { ApiProperty } from '@nestjs/swagger'
+
+export enum NotificationType {
+  userWelcome = 'userWelcome',
+  projectMeetingConfirmed = 'projectMeetingConfirmed',
+  projectMeetingCanceled = 'projectMeetingCanceled',
+  projectNewComment = 'projectNewComment',
+  projectApplicationReceived = 'projectApplicationReceived',
+  projectApplicationApproved = 'projectApplicationApproved',
+  projectApplicationRejected = 'projectApplicationRejected',
+  challengeMeetingConfirmed = 'challengeMeetingConfirmed',
+  challengeMeetingCanceled = 'challengeMeetingCanceled',
+  challengeNewComment = 'challengeNewComment',
+  challengeApplicationReceived = 'challengeApplicationReceived',
+  challengeApplicationApproved = 'challengeApplicationApproved',
+  challengeApplicationRejected = 'challengeApplicationRejected'
+}
+
+export enum TargetType {
+  challenge = 'challenge',
+  project = 'project',
+  other = 'other'
+}
+
+export class TargetInfo {
+  @IsEnum(TargetType)
+  @ApiProperty({
+    enum: TargetType,
+    description: '알림 클릭시 이동할 대상 타입'
+  })
+  type: TargetType
+
+  @IsInt()
+  @ApiProperty({ description: '대상 ID' })
+  id: number
+}
+
+export enum RecipientType {
+  user = 'user',
+  ceo = 'ceo'
+}

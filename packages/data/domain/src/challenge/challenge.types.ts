@@ -1,0 +1,108 @@
+export enum ChallengeStatus {
+  RECRUITING = 'RECRUITING',
+  RECRUITMENT_CLOSED = 'RECRUITMENT_CLOSED',
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED'
+}
+
+export enum ChallengeDifficulty {
+  BEGINNER = 'BEGINNER',
+  INTERMEDIATE = 'INTERMEDIATE',
+  ADVANCED = 'ADVANCED'
+}
+
+export enum MeetingType {
+  ONLINE = 'ONLINE',
+  OFFLINE = 'OFFLINE',
+  BOTH = 'BOTH'
+}
+
+export enum TechStack {
+  JAVASCRIPT = 'JAVASCRIPT',
+  TYPESCRIPT = 'TYPESCRIPT',
+  REACT = 'REACT',
+  VUE = 'VUE',
+  NODEJS = 'NODEJS',
+  SPRING = 'SPRING',
+  JAVA = 'JAVA',
+  NEXTJS = 'NEXTJS',
+  NESTJS = 'NESTJS',
+  EXPRESS = 'EXPRESS',
+  GO = 'GO',
+  C = 'C',
+  CPP = 'CPP',
+  PYTHON = 'PYTHON',
+  DJANGO = 'DJANGO',
+  SWIFT = 'SWIFT',
+  KOTLIN = 'KOTLIN',
+  FLUTTER = 'FLUTTER',
+  REACT_NATIVE = 'REACT_NATIVE',
+  MYSQL = 'MYSQL',
+  POSTGRESQL = 'POSTGRESQL',
+  MONGODB = 'MONGODB',
+  GRAPHQL = 'GRAPHQL',
+  REDIS = 'REDIS',
+  SUPABASE = 'SUPABASE',
+  FIREBASE = 'FIREBASE',
+  DOCKER = 'DOCKER',
+  KUBERNETES = 'KUBERNETES',
+  AWS = 'AWS',
+  GIT = 'GIT',
+  GITHUB_ACTIONS = 'GITHUB_ACTIONS',
+  FIGMA = 'FIGMA',
+  UNITY = 'UNITY',
+  PHP = 'PHP',
+  SVELTE = 'SVELTE'
+}
+
+export enum Position {
+  FRONTEND = 'FRONTEND',
+  BACKEND = 'BACKEND',
+  DESIGNER = 'DESIGNER',
+  DEVOPS = 'DEVOPS',
+  IOS = 'IOS',
+  ANDROID = 'ANDROID',
+  PM = 'PM',
+  PLANNER = 'PLANNER',
+  MARKETER = 'MARKETER'
+}
+
+export enum ChallengeType {
+  SIDE_PROJECT = 'SIDE_PROJECT',
+  STUDY = 'STUDY',
+  HACKATHON = 'HACKATHON',
+  COMPETITION = 'COMPETITION',
+  MENTORING = 'MENTORING',
+  OTHER = 'OTHER'
+}
+
+export enum ContactMethod {
+  KAKAO_OPEN_CHAT = 'KAKAO_OPEN_CHAT',
+  NOTION = 'NOTION',
+  DISCORD = 'DISCORD'
+}
+
+export enum ChallengeJoinType {
+  INSTANT = 'INSTANT',
+  APPROVAL = 'APPROVAL'
+}
+
+export enum ChallengeVerificationFrequency {
+  ONCE_A_DAY = 'ONCE_A_DAY',
+  EVERY_WEEKDAY = 'EVERY_WEEKDAY',
+  ONCE_A_WEEK = 'ONCE_A_WEEK',
+  THREE_TIMES_A_WEEK = 'THREE_TIMES_A_WEEK'
+}
+
+export enum ChallengeVerificationMethod {
+  IMAGE_AND_TEXT = 'IMAGE_AND_TEXT',
+  TEXT = 'TEXT',
+  IMAGE = 'IMAGE'
+}
+
+export enum ChallengeParticipationStatus {
+  NONE = 'NONE',
+  PENDING = 'PENDING',
+  JOINED = 'JOINED',
+  REJECTED = 'REJECTED'
+}

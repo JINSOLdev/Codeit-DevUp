@@ -1,0 +1,32 @@
+{
+  "extends": "@system/typescript/nest.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@data/config": [
+        "../config/src"
+      ],
+      "@data/config/*": [
+        "../config/src/*"
+      ],
+      "@data/decorators": [
+        "../decorators/src"
+      ],
+      "@data/domain": [
+        "../domain/src"
+      ],
+      "@data/domain/*": [
+        "../domain/src/*"
+      ],
+      "@data/dto/*": [
+        "../dto/src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

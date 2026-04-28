@@ -1,0 +1,78 @@
+name: backend-dev
+
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - app
+
+  user-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.app
+      args:
+        APP_NAME: user-api
+        APP_PORT: 4000
+        NODE_ENV: development
+    restart: unless-stopped
+    env_file: .env.dev
+    environment:
+      PORT: "4000"
+      REDIS_HOST: redis
+      NODE_ENV: development
+      NODE_OPTIONS: --no-deprecation
+      DB_HOST: host.docker.internal  # SSH 터널: localhost:5432 → RDS
+      DB_SSL: "true"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - redis
+    networks:
+      - app
+
+  batch:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.app
+      args:
+        APP_NAME: batch
+        APP_PORT: 4002
+        NODE_ENV: development
+    restart: unless-stopped
+    env_file: .env.dev
+    environment:
+      PORT: "4002"
+      REDIS_HOST: redis
+      NODE_ENV: development
+      DB_HOST: host.docker.internal  # SSH 터널: localhost:5432 → RDS
+      DB_SSL: "true"
+    ports:
+      - "4002:4002"
+    depends_on:
+      - redis
+    networks:
+      - app
+
+  nginx:
+    image: nginx:1.25-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/conf.d/default.dev.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - user-api
+    networks:
+      - app
+
+volumes:
+  redis-data:
+
+networks:
+  app:
+    driver: bridge

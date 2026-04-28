@@ -1,0 +1,27 @@
+{
+  "extends": "@system/typescript/library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@app/data/decorators": [
+        "../decorators/src"
+      ],
+      "@data/dto": [
+        "../dto/src"
+      ],
+      "@data/dto/*": [
+        "../dto/src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "**/*spec.ts"
+  ]
+}
